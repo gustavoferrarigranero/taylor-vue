@@ -30,7 +30,7 @@
     },
     methods: {
       saveNewSquare() {
-        this.$http.post('https://172.17.0.3:8080/' + this.$parent.userLogged._id + '/squares', {
+        this.$http.post('http://127.0.0.1:8080/' + this.$parent.userLogged._id + '/squares', {
           name: this.square.name,
         }).then((ret) => {
           if (ret.body) {
@@ -41,7 +41,7 @@
         });
       },
       getSquares() {
-        this.$http.get('https://172.17.0.3:8080/' + this.$parent.userLogged._id + '/squares').then((ret) => {
+        this.$http.get('http://127.0.0.1:8080/' + this.$parent.userLogged._id + '/squares').then((ret) => {
           if (ret.body) {
             this.squares = ret.body;
           }
