@@ -30,7 +30,7 @@
     },
     methods: {
       saveNewSquare() {
-        this.$http.post('http://35.231.32.198:8080/' + this.$parent.userLogged._id + '/squares', {
+        this.$http.post('http://35.185.60.15:8080/' + this.$parent.userLogged._id + '/squares', {
           name: this.square.name,
         }).then((ret) => {
           if (ret.body) {
@@ -41,7 +41,7 @@
         });
       },
       getSquares() {
-        this.$http.get('http://35.231.32.198:8080/' + this.$parent.userLogged._id + '/squares').then((ret) => {
+        this.$http.get('http://35.185.60.15:8080/' + this.$parent.userLogged._id + '/squares').then((ret) => {
           if (ret.body) {
             this.squares = ret.body;
           }

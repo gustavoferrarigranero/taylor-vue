@@ -67,14 +67,14 @@
     },
     methods: {
       getCards() {
-        this.$http.get('http://35.231.32.198:8080/squares/' + this.$route.params.id + '/cards').then((ret) => {
+        this.$http.get('http://35.185.60.15:8080/squares/' + this.$route.params.id + '/cards').then((ret) => {
           if (ret.body) {
             this.cards = ret.body;
           }
         });
       },
       getSquare() {
-        this.$http.get('http://35.231.32.198:8080/squares/' + this.$route.params.id).then((ret) => {
+        this.$http.get('http://35.185.60.15:8080/squares/' + this.$route.params.id).then((ret) => {
           if (ret.body) {
             this.$parent.square = ret.body;
           }
@@ -103,7 +103,7 @@
         }, this);
       },
       saveNewCard(){
-        this.$http.post('http://35.231.32.198:8080/squares/' + this.$route.params.id + '/cards', this.card).then((ret) => {
+        this.$http.post('http://35.185.60.15:8080/squares/' + this.$route.params.id + '/cards', this.card).then((ret) => {
           if (ret.body) {
             this.cards.push(ret.body);
             this.card = {
@@ -116,7 +116,7 @@
         });
       },
       removeCard(card){
-        this.$http.delete('http://35.231.32.198:8080/cards/' + card._id).then((ret) => {
+        this.$http.delete('http://35.185.60.15:8080/cards/' + card._id).then((ret) => {
           if (ret.body) {
             this.cards = this.cards.filter(function (card) {
               return card._id != this._id;
@@ -125,7 +125,7 @@
         });
       },
       editCard(card){
-        this.$http.put('http://35.231.32.198:8080/cards/' + card._id, card).then((ret) => {
+        this.$http.put('http://35.185.60.15:8080/cards/' + card._id, card).then((ret) => {
           if (ret.body) {
             this.cards = this.cards.filter(function (card) {
               return card._id == this._id ? this : card;

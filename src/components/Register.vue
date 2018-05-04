@@ -33,7 +33,7 @@
     },
     methods: {
       login: function () {
-        this.$http.post('http://35.231.32.198:8080/users', {
+        this.$http.post('http://35.185.60.15:8080/users', {
           name: this.user.name,
           email: this.user.email,
           password: this.user.password

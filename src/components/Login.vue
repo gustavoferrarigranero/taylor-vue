@@ -29,7 +29,7 @@
     },
     methods: {
       login: function () {
-        this.$http.post('http://35.231.32.198:8080/users/login', {
+        this.$http.post('http://35.185.60.15:8080/users/login', {
           email: this.user.email,
           password: this.user.password
         }).then(ret => {
