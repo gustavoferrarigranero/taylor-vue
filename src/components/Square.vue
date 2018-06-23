@@ -78,7 +78,6 @@
           height: 100px;
         overflow: hidden;
         word-wrap: break-word;
-        word-break: break-all;
         > a {
           display: flex;
           align-items: center;

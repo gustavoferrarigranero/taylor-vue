@@ -1,15 +1,15 @@
 @import "~bourbon/core/bourbon";
-
 @import "~bourbon-neat/app/assets/stylesheets/neat";
 
 $mobile: new-breakpoint(max-width 1024px 1);
-$gutter:               15px;
+$desktop: new-breakpoint(min-width 1025px 1);
+$gutter: 15px;
 
-$primary-color:        #2196F3;
-$primary-color-dark:   #1976D2;
-$primary-color-light:  #BBDEFB;
-$primary-color-text:   #FFFFFF;
-$accent-color:         #FFC107;
-$primary-text-color:   #212121;
+$primary-color: #2196F3;
+$primary-color-dark: #1976D2;
+$primary-color-light: #BBDEFB;
+$primary-color-text: #FFFFFF;
+$accent-color: #FFC107;
+$primary-text-color: #212121;
 $secondary-text-color: #757575;
-$divider-color:        #BDBDBD;
+$divider-color: #BDBDBD;

@@ -19,7 +19,7 @@
       <button>Create Card</button>
     </form>
     <div class="squares">
-      <ul v-if="backlog.length">
+      <ul>
         <li>Backlog</li>
         <li v-for="card in backlog">
             <Card v-on:remove="removeCard" v-on:edit="editCard" :card="card"></Card>

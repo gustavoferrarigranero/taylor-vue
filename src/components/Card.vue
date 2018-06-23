@@ -7,9 +7,11 @@
     </span>
     <div>
       <div>{{ card.name }}</div>
-      <svg @click="remove" viewBox="4 4 16 16">
-        <path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"></path>
-      </svg>
+      <span @click="remove">
+        <svg viewBox="2 2 20 20">
+          <path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"></path>
+        </svg>
+      </span>
     </div>
     <span @click="edit(parseInt(card.status)+1)" v-if="card.status != '3'">
       <svg viewBox="4 4 16 16">
@@ -49,7 +51,6 @@
     word-wrap: break-word;
     color: $secondary-text-color;
     background-color: $primary-color-light;
-    word-break: break-all;
     height: 100px;
     display: flex;
     * {
@@ -83,13 +84,18 @@
         display: flex;
         align-items: center;
       }
-      > svg {
-        flex: 0 0 20px;
+      span {
         margin: #{$gutter / 3} 0;
         cursor: pointer;
-        fill: $primary-color-light;
+        width: 100%;
+        height: 16px;
+        > svg {
+          fill: $primary-color-light;
+        }
         &:hover {
-          fill: $primary-color-dark;
+          > svg {
+            fill: $primary-color-dark;
+          }
         }
       }
     }

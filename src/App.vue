@@ -100,6 +100,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      > img {
+        max-width: 30px;
+        margin: 0 $gutter;
+        @include media($desktop){
+          max-width: 100%;
+        }
+      }
       > nav {
         flex: 1;
         text-align: left;
